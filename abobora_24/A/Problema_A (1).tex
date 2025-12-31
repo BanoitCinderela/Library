@@ -1,0 +1,73 @@
+\begin{center}
+Problema A
+
+Abóbora Perfeita
+
+{\small Nome do arquivo: A.c, A.cpp, A.java, ou A.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Athos José}
+
+\end{center}
+
+Na cidade de Rio Verde, a produção de abóboras é tão abundante que, ao longo dos anos, surgiram várias lendas sobre abóboras especiais. Uma das lendas mais antigas fala sobre a mítica Abóbora Perfeita.
+
+Segundo a lenda, uma abóbora só pode ser considerada perfeita quando nascem, ao redor da abóbora maior, abóboras menores cujos respectivos tamanhos sejam divisores da abóbora maior. Além disso, a soma dos tamanhos das abóboras menores ao redor deve resultar no tamanho da abóbora maior. Essas propriedades tornam a abóbora perfeita.
+
+Você foi chamado para investigar abóboras de diferentes tamanhos e determinar quais delas podem ser consideradas perfeitas, de acordo com a lenda.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A primeira linha contem um inteiro $N$, representando o número de abóboras $(1 \leq N \leq 10^7)$. As $N$ linhas seguintes contem um inteiro $T$ $(1 \leq T \leq 10^4)$, onde T indica o tamanho da abóbora.
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+Para cada caso de teste imprima ``SIM'' se a abóbora pode ser considerada perfeita. Caso contrario imprima ``NAO''.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{4} & \texttt{NAO} \\
+         \texttt{9} & \texttt{SIM} \\
+         \texttt{6} & \texttt{SIM} \\
+         \texttt{28} & \texttt{NAO} \\
+         \texttt{21} & \texttt{} \\
+         \hline
+    \end{tabular}
+    
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputA3}
+    
+\end{table}
+
+
+\vspace{0.3cm}
+\textbf{Nota}
+
+O exemplo contem $4$ caso de testes.
+
+No \textbf{primeiro} caso temos $1+3 = 4$ que é diferente do tamanho $9$.
+
+Já no \textbf{segundo} caso temos $1+2+3 = 6$ que é igual ao tamanho da abóbora $6$.
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/A/A4.cpp}
+\end{center}

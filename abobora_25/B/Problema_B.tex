@@ -1,0 +1,69 @@
+\begin{center}
+Problema B
+
+O Desafio do Chocolate do Zé do Grafo
+
+{\small Nome do arquivo: B.c, B.cpp, B.java, ou B.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por André da Cunha Ribeiro}
+
+\end{center}					
+
+Todo competidor de maratona de programação sabe que as longas horas de um concurso exigem um combustível especial para o cérebro. E qual é o lanche preferido de 10 entre 10 programadores para manter o foco e a energia? Chocolate, é claro! A combinação de açúcar e cafeína parece ter sido feita sob medida para transformar um bug teimoso em um cobiçado "Accepted".
+
+%Zé do Grafo, mais do que um professor, é um mentor que entende perfeitamente a rotina de seus alunos. Vendo sua equipe exausta após um treino intenso para a grande final da competição, ele aparece com o suprimento de energia definitivo: uma enorme barra de chocolate retangular, com N fileiras e M colunas.
+
+%Mas, fiel ao seu estilo, Zé do Grafo não perderia a chance de um bom desafio. Ele colocou a barra de chocolate sobre a mesa e continuou: "O processo para dividir nosso prêmio é simples. A cada movimento, só podemos pegar um único pedaço de chocolate e quebrá-lo uma única vez, sempre em linha reta, seguindo um dos sulcos que dividem os quadrados. Cada quebra transforma um pedaço em dois. Vamos repetir isso até que toda a barra se transforme nos pequenos quadrados individuais de 1x1."
+
+%Ele fez uma pausa e olhou para a equipe com um olhar astuto. "Agora, a pergunta que vale o primeiro pedaço: qual o número exato de quebras necessárias para completar a tarefa?"
+
+
+Zé do Grafo, um famoso professor de Teoria dos Grafos e um ávido criador de quebra-cabeças, propôs um desafio para seus alunos. Ele apresentou uma barra de chocolate retangular, dividida em pequenos quadrados por sulcos, formando uma grade de $N$ fileiras e $M$ colunas.
+
+O desafio é o seguinte: para dividir a barra de chocolate em $(N * M)$ quadrados de chocolate individuais, os alunos só podem realizar um tipo de movimento. A cada passo, eles podem pegar um único pedaço de chocolate e quebrá-lo ao longo de um dos sulcos (seja na horizontal ou na vertical), resultando em dois pedaços menores.
+
+Sua tarefa é criar um programa que ajude os alunos do Zé do Grafo a descobrir rapidamente o número total de quebras necessárias para transformar a barra inteira em quadrados individuais.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+A entrada contém  na primeira linha o valor $1 \leq X \leq 1000$ que representa o número dos casos de teste. Seguido de $X$ leituras dos valores de $N,M$ $(1 \leq N,M \leq 10^9)$ indicando as dimensões dos chocolates. 
+
+
+\vspace{0.3cm}
+\textbf{Saída}
+Para cada caso de teste, o programa deve produzir uma linha na saída, contendo um único inteiro que representa o número total de quebras necessárias para dividir o chocolate daquele caso de teste.
+
+{\tiny
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{4} & \texttt{3} \\  
+         \texttt{2 2} & \texttt{23} \\
+         \texttt{4 6} & \texttt{55} \\
+         \texttt{7 8} & \texttt{836} \\
+         \texttt{27 31} & \texttt{} \\
+        \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+\end{table}}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_25/B/B5.cpp}
+\end{center}

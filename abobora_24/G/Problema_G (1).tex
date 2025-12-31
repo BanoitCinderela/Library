@@ -1,0 +1,63 @@
+\begin{center}
+Problema G
+
+Zé do Grafo no Halloween
+
+{\small Nome do arquivo: G.c, G.cpp, G.java, ou G.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por André da Cunha Ribeiro}
+
+\end{center}			
+
+Zé do Grafo, o famoso bruxo das noites de Halloween e do Abóbora Contest, adora brincar com suas poções mágicas e encantamentos geométricos. Este ano, ele está experimentando sua força com palitinhos mágicos, que têm o poder de se transformar em lados de um triângulo. No entanto, para garantir que o feitiço funcione, ele precisa seguir a regra mágica da {\bf Desigualdade Triangular}, ou seja, a soma dos comprimentos de quaisquer dois palitinhos deve ser maior que o comprimento do terceiro.
+
+Zé do Grafo possui vários palitinhos retos de diversos tamanhos e o objetivo e formar um triângulo com eles pela rega mágica, de modo que cada palitinho represente exatamente um lado do triângulo. Não é permitido que algum lado possua um buraco, nem que um pedaço de algum palitinho sobre para fora do triângulo. A figura \ref{fig:G} ilustra um trio permitido na sub-figura (a) e as sub-figuras (b) e (c) ilustram trios proibidos de acordo com as regras mágica.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=14cm]{fig/figuraG.png}
+\caption{Exemplos de palitinhos}
+\label{fig:G}
+\end{figure}
+
+Zé do Grafo quer saber se com três palitinhos distintos, ele consegue um triângulo pela regra mágica. 
+
+\vspace{0.3cm}
+\textbf{Entrada}
+A entrada são três números inteiros, que representa o tamanho de cada palitinho.
+
+\vspace{0.3cm}
+\textbf{Saída}
+O programa deve retornar ``SIM'' caso Zé do Grafos consiga forma o triângulo. Caso contrário, a resposta será ``NAO''. Não esqueça do terminador de linha.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+        \texttt{3 4 6} & \texttt{SIM} \\ \hline
+        \texttt{3 4 7} & \texttt{NAO} \\ \hline
+        \texttt{3 3 7} & \texttt{NAO} \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/G/G4.cpp}
+\end{center}

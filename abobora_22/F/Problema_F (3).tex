@@ -1,0 +1,69 @@
+\begin{center}
+Problema F
+
+Zé do Grafo
+
+{\tiny Por André da Cunha Ribeiro}
+
+Timelimit: $1$	
+\end{center}			
+
+Zé do Grafo é um famoso Mestre Jedi matador de monstros. Diz a lenda que existe uma cidade escondida nos confins do IFGoiano - Campus Rio Verde. A cidade é compostas por várias pontes que ligam vários bairros da cidade, muito parecido com as setes pontes da cidade de Künigsberg. Mas Zé está enfrentando um grande problema na cidade que é o aumento dos monstros.
+
+Mas Zé do Grafo tem contigo um grande poder. Esse poder permitir ele isolar todos os monstros em alguma ilha e depois ele pode destruir as pontes que ligam o bairro. Tudo estaria certo se Zé do Grafo não tivesse o limite de uma bomba. Contudo, ele precisa de sua ajuda para identificar se a cidade possui um bairro ligado por apenas uma ponte.
+
+Ou seja, dadas as descrições dos bairros e das pontes, sua tarefa é determinar se Zé do Grafo consegue separar todos os monstros em um bairro.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+A entrada contém um caso de teste. A primeira linha do caso de teste contém dois inteiros $N$, $M$, indicando respectivamente o número de bairros $(1 \leq N \leq 50)$ e de pontes $(1 \leq M \leq 200)$.
+
+Cada uma das $M$ linhas seguintes composta de dois inteiros que descreve uma ponte.
+
+\vspace{0.3cm}
+\textbf{Saída}
+Para o caso de teste da entrada seu programa deve produzir uma linha na saída contendo $'S'$ se Zé do Grafo consegue separar os monstros em um bairro e $'N'$ caso contrário.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{3 2} & \texttt{S} \\  
+         \texttt{1 2} & \texttt{} \\
+         \texttt{2 3} & \texttt{} \\
+         \hline
+         \texttt{6 7} & \texttt{S} \\  
+         \texttt{1 2} & \texttt{} \\
+         \texttt{1 3} & \texttt{} \\
+         \texttt{2 3} & \texttt{} \\
+         \texttt{3 4} & \texttt{} \\
+         \texttt{4 5} & \texttt{} \\
+         \texttt{4 6} & \texttt{} \\
+         \texttt{5 6} & \texttt{} \\
+         \hline
+         \texttt{3 3} & \texttt{N} \\  
+         \texttt{1 2} & \texttt{} \\
+         \texttt{1 3} & \texttt{} \\
+         \texttt{2 3} & \texttt{} \\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputJ}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/F/ze2022.cpp}
+\end{center}

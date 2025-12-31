@@ -1,0 +1,98 @@
+\begin{center}
+Problema F
+
+Monitorando Pragas
+
+{\small Nome do arquivo: F.c, F.cpp, F.java, ou F.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Emanuel Silva Araujo}
+
+\end{center}
+
+\footnotesize
+
+O agricultor Seu Jayme sofre constantemente com infestações de insetos em sua lavoura de soja. Para reduzir perdas e otimizar o manejo, ele procurou a EMBRAPII para desenvolver uma ferramenta de monitoramento diário de pragas.
+Sua tarefa como programador é implementar um programa que leia os valores de população diária e identifique situações de risco, emitindo alertas de acordo com os seguintes critérios:
+%Critérios de Alerta
+    \begin{itemize}
+        \item  Alerta por pico diário [Pico]
+        \begin{itemize}
+            \item Se em qualquer dia a população registrada ultrapassar 200 insetos.
+        \end{itemize}
+        \item  Alerta por variação em 7 dias [7 Dias]
+        \begin{itemize}
+            \item Se a diferença percentual entre o valor mínimo e o máximo em um intervalo de 7 dias consecutivos for maior ou igual a 20\%.
+        \end{itemize}
+        \item  Alerta por crescimento contínuo [Crescimento]
+        \begin{itemize}
+            \item Se ocorrerem 4 dias seguidos de crescimento, e em cada dia a população for pelo menos 5\% maior que a do dia anterior.
+        \end{itemize}
+    \end{itemize}
+        
+\vspace{0.3cm}
+\textbf{Entrada}
+
+Um número inteiro $(0 <= N <= 360)$, representando a quantidade de dias monitorados (entre os dias $0$ e $360$).
+Uma sequência de $N$ números inteiros $(0 < X <= 5000)$, cada um representando a estimativa da população de insetos no respectivo dia.
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+    Para cada alerta identificado, o programa deve imprimir:
+    \begin{itemize}
+        \item O tipo do alerta;
+        \item O(s) dia(s) correspondente(s);
+        \item O valor percentual (quando aplicável), com duas casas decimais.
+    \end{itemize}
+    Caso não tenha nenhum alerta, deve imprimir uma mensagem de "Nenhum Alerta".
+    Para dias que tiveram mais de um alerta a ordem de impressão é: $[Pico] > [7 Dias] > [Crescimento]$.
+ 
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabular}{|p{8cm}|p{8cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+		    \texttt{10} & \texttt{[Crescimento] 1-4: maior que >= 5\% } \\
+                \texttt{50 60 70 80 90 200 210 220 180 170} & \texttt{[Crescimento] 1-5: maior que >= 5\% } \\
+& \texttt{[Crescimento] 1-6: maior que >= 5\% } \\
+& \texttt{[Pico] 7: 210 insetos} \\
+& \texttt{[7 Dias] 1-7: 320.00\%} \\
+& \texttt{[Crescimento] 1-7: maior que >= 5\% } \\
+& \texttt{[Pico] 8: 220 insetos} \\
+& \texttt{[7 Dias] 2-8: 266.67\%} \\
+& \texttt{[7 Dias] 3-9: 214.29\%} \\
+& \texttt{[7 Dias] 4-10: 175.00\%} \\
+
+
+         \hline
+   		    \texttt{9}   & \texttt{[Crescimento] 1-4: maior que >= 5\% } \\
+            \texttt{100 105 112 118 90 96 100 120 80} & \texttt{[7 Dias] 2-8: 33.33\%} \\
+         \hline    
+   		    \texttt{8}   & \texttt{Nenhum Alerta} \\
+            \texttt{118 120 118 140 140 140 130 100} & \\
+         \hline    
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+
+\end{table}
+
+\normalsize
+
+\newpage
+
+\begin{center}
+\lstinputlisting{abobora_25/F/F5.cpp}
+\end{center}

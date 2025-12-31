@@ -1,0 +1,136 @@
+\subsection{Complexidade O(n)}
+Uma complexidade $O(n)$ (complexidade linear) significa que o tempo ou espaço necessário para executar um algoritmo aumenta de forma linear com o tamanho da entrada. Em outras palavras, se você dobrar o tamanho da entrada, o algoritmo também dobrará em tempo de execução ou espaço de memória.
+
+Para demonstrar a complexidade $O(n)$ um exercício retirado do site~\cite{beecrowd1} de busca em um vetor foi escolhido, a atividade em questão consiste em procurar dentro de uma lista de números qual é o menor valor entre eles, destacando também a sua posição dentro da lista.
+
+\begin{center}
+\large Menor e Posição
+
+{ BeeCrowd 1180}
+
+Timelimit: $1$	
+\end{center}
+
+Faça um programa que leia um valor $N$. Este $N$ será o tamanho de um vetor $X[N]$. A seguir, leia cada um dos valores de X, encontre o menor elemento deste vetor e a sua posição dentro do vetor, mostrando esta informação.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A primeira linha de entrada contém um único inteiro $N (1 < N < 1000)$, indicando o número de elementos que deverão ser lidos em seguida para o vetor $X[N]$ de inteiros. A segunda linha contém cada um dos $N$ valores, separados por um espaço. Vale lembrar que nenhuma entrada haverá números repetidos.
+
+\vspace{0.3cm}
+\textbf{Saída}
+A primeira linha apresenta a mensagem “Menor valor:” seguida de um espaço e do menor valor lido na entrada. A segunda linha apresenta a mensagem “Posição:” seguido de um espaço e da posição do vetor na qual se encontra o menor valor lido, lembrando que o vetor inicia na posição zero.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{10} & \texttt{Menor valor: -5} \\
+         \hline
+         \texttt{1,2,3,4,-5,6,7,8,9,10} & \texttt{Posicao: 4} \\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tabela02}
+\end{table}
+
+
+
+\begin{table}[ht]
+\centering
+\caption{Exemplos de entradas e saídas}
+\label{tab:algoritmo2}
+\begin{tabular}{|p{8cm}|c|c|}
+\hline
+\textbf{\cellcolor[HTML]{C0C0C0}Algoritmo} & \textbf{\cellcolor[HTML]{C0C0C0}Custo} & \textbf{\cellcolor[HTML]{C0C0C0}Complexidade} \\
+\hline
+\begin{minipage}{8cm}
+\begin{algorithm}[H]
+ \caption{Menor e Posicao}
+\SetAlgoLined
+Declare $X, N, M, POS$ inteiro\;
+Leia $N$\;
+\For{$X \leftarrow 0$ \textbf{até} $N-1$ faça}{
+    Leia $P[X]$\;
+}
+$M \leftarrow 0$\;
+\For{$X \leftarrow 1$ \textbf{até} $N-1$ faça}{
+    \If{$P[X] < P[M]$}{
+        $M \leftarrow X$\;
+    }
+}
+Escreva $P[M]$\;
+Escreva $M$\;
+\end{algorithm}
+\end{minipage} 
+& 
+\begin{minipage}{2cm}
+C1 \\
+C2\\
+C3 \\
+C4 \\
+C5 \\
+C6 \\
+C7 \\
+C8 \\
+C9 \\
+    C10 \\
+C11 \\
+C12 \\
+C13
+\end{minipage}
+&
+\begin{minipage}{2cm}
+1 \\
+1 \\
+1 \\
+1 \\
+$n$ \\
+$n$ \\
+1 \\
+$n-1$ \\
+$n-1$ \\
+$n-1$ \\
+$n-1$ \\
+1 \\
+1
+\end{minipage}
+\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{equation}
+T(n) = C_1*1 + C_2*1 + C_3*1 + C_4*(n+1) + C_5*n + C_6*1+ C_7*1 + C_8*n
+\end{equation}
+\begin{equation}
++ C_9*(n-1) + C_10*(n-1) + C_11*1 + C_12*1 + C_13*1 +  C_14*1 + C_15*1
+\end{equation}
+\begin{equation}
+    T(n)= K*(1 + 1 + 1 + n+1 + n + n + 1 + n + n-1 + n-1 + n-1 + n-1 + 1 + 1 + 1)
+    \end{equation}
+    \begin{equation}
+    T(n)= 8*n + 4 =O(n)
+    \end{equation}
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+    \lstinputlisting[language=C++]{code/resol++.cpp}
+\end{minipage}
+\end{center}
+
+
+    
+    \newpage

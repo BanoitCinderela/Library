@@ -1,0 +1,82 @@
+\begin{center}
+Problema B
+
+Jack Lanterna e as trilhas
+
+{\small Nome do arquivo: B.c, B.cpp, B.java, ou B.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por André da Cunha Ribeiro}
+
+\end{center}					
+
+{\footnotesize
+Jack Lanterna é um caçador de monstros muito temido, que na noite de Halloween decide explorar uma cidade assombrada nos confins de uma floresta. A cidade possui casas mal-assombradas conectadas por trilhas, cada uma com um número de monstros que guardam o caminho.
+
+Cada vez que Jack atravessa uma trilha e derrota os monstros que a guardam, ele destrói a trilha com sua magia, impedindo o retorno por aquele caminho. Jack consegue descansar em cada casa para recuperar suas forças antes de enfrentar mais monstros. Sua missão é derrotar todos os monstros e, ao final, retornar à casa inicial.
+
+Você precisa determinar se Jack Lanterna consegue eliminar todos os monstros e retornar à casa inicial após derrotar todos os monstros.}
+
+\vspace{0.3cm}
+\textbf{Entrada}
+A entrada contém vários casos de teste. A primeira linha de cada caso de teste contém dois inteiros $N$, $M$, indicando respectivamente o número de casas $(1 \leq N \leq 1000)$, e de trilhas $(1 \leq N \leq 1000)$. 
+
+Cada uma das $M$ linhas seguintes contém três inteiros $u$, $v$ e $k$ que descrevem uma trilha entre as casas $u$ e $v$ e a quantidade de $k$ monstros nela.
+
+\vspace{0.3cm}
+\textbf{Saída}
+Para cada caso de teste, o programa deve produzir uma linha na saída contendo $S$ se Jack Lanterna consegue eliminar todos os monstros e retornar à sua casa inicial, ou $N$ caso contrário.
+
+{\tiny
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{5 6} & \texttt{S} \\  
+         \texttt{1 2 1} & \texttt{} \\
+         \texttt{1 3 2} & \texttt{} \\
+         \texttt{1 4 3} & \texttt{} \\
+         \texttt{1 5 4} & \texttt{} \\
+         \texttt{2 3 2} & \texttt{} \\
+         \texttt{4 5 1} & \texttt{} \\
+         \hline
+         \texttt{5 7} & \texttt{N} \\  
+         \texttt{1 2 1} & \texttt{} \\
+         \texttt{1 3 2} & \texttt{} \\
+         \texttt{1 4 3} & \texttt{} \\
+         \texttt{1 5 4} & \texttt{} \\
+         \texttt{2 3 2} & \texttt{} \\
+         \texttt{3 4 1} & \texttt{} \\
+         \texttt{4 5 1} & \texttt{} \\
+         \hline
+         \texttt{6 6} & \texttt{N} \\  
+         \texttt{1 2 1} & \texttt{} \\
+         \texttt{1 3 2} & \texttt{} \\
+         \texttt{2 3 3} & \texttt{} \\
+         \texttt{4 5 1} & \texttt{} \\
+         \texttt{5 6 2} & \texttt{} \\
+         \texttt{6 4 3} & \texttt{} \\
+        \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputJ3}
+\end{table}}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/B/B4.cpp}
+\end{center}

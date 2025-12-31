@@ -1,0 +1,67 @@
+\begin{center}
+Problema D
+
+O Teorema de Lis
+
+{\tiny Por Athos José}
+
+Timelimit: $1$	
+\end{center}
+
+Se o assunto é relacionamento, o tipo de garota de Colin Singleton tem nome: Lis. E, em se tratando de Colin e Lis, o desfecho é sempre o mesmo, ele leva um belo fora. Já aconteceu e foram muitos.
+
+Após o mais recente e traumático pé na bunda, o Colin que só namora Lis resolve cair de cara na programação. Com seu caderninho de anotações no bolso e o melhor amigo (você) do lado que o está ajudando na programação, o garoto PhD em levar o fora, descobre sua verdadeira missão. Se você acha que é elaborar e comprovar o Teorema Fundamental da Previsibilidade das Lis? A resposta é não! Mas sim encontrar o tamanho de uma subsequência de idades das Lis que Colin namorou.
+
+Dadas as idades que estão no caderninho de anotações de Colin, você deve encontrar o tamanho da subsequência de idades crescente que seja a mais longa possível. Esta subsequência não é necessariamente contígua.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A entrada é composta por vários casos de teste. A Primeira linha é a quantidade de casos de teste $ T $ $ ( 1 \leq T \leq 400) $.
+
+Os próximos $ T $ casos de teste é composto por um número $ N $ onde ($ 1 \leq N \leq 400 $), indicando a quantidade de idades anotadas. A próxima linha contem $ N $ números que compõem um array de $ idades $ onde ($ 18 \leq idades_i \leq 50 $).
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+A saída deve conter apenas um número que é a quantidade de elementos da maior subsequência.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{3} & \texttt{3} \\  
+         \texttt{5} & \texttt{4} \\
+         \texttt{18 20 19 26 25} & \texttt{7} \\
+         \texttt{10} & \texttt{} \\
+         \texttt{34 47 23 29 50 21 22 48 32 34} & \texttt{} \\
+         \texttt{7} & \texttt{} \\
+         \texttt{18 20 31 33 39 43 44} & \texttt{} \\
+         \hline
+         \texttt{2} & \texttt{7} \\  
+         \texttt{19} & \texttt{3} \\
+         \texttt{24 36 26 27 25 29 48 44 22 43 40 37 45 48 21 19 19 21 48} & \texttt{} \\
+         \texttt{4} & \texttt{} \\
+         \texttt{25 31 38 31} & \texttt{} \\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/D/main.cc}
+\end{center}

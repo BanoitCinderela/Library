@@ -1,0 +1,72 @@
+\begin{center}
+Problema G
+
+Fabiola e os cafés
+
+{\tiny Por Cleon Xavier Pereira Júnior}
+
+Timelimit: $1$	
+\end{center}			
+
+{\footnotesize
+Professora Fabiola é fascinada por cafés de qualidade. Em 2022, a professora Fabiola pegou seu Ford Ka e, com sua filha, foi aventurar-se pelo sul de minas para experimentar os melhores cafés do país. Em cada produtora de cafés especiais que Fabiola visitava, ela levava um pacote. Os pacotes tinham diferentes valores e pesos. 
+
+Acontece que, na empolgação, a professora Fabiola esqueceu que tinha um Ford Ka, uma filha e umas bagagens. Já sabem o que aconteceu né? Eis que a professora Fabiola tinha um problema de excesso de carga. Ao término da viagem, quando ela colocou tudo no carro, a professora se deparou com um carro rebaixado, mas não era por estilização, era por questão de peso mesmo. 
+
+Observando a inviabilidade da situação, a professora Fabiola notou que deveria deixar uns cafés para trás. Claro que ela gostaria de levar o máximo de cafés possíveis e que tivesse o menor prejuízo. Para isso, ela estava disposta, se necessário, a abrir alguns pacotes de café e levar só parte desse, para ter a possibilidade de levar a capacidade máxima.
+
+No momento, a professora Fabiola só está preocupada em saber o tamanho do prejuízo financeiro que ela terá na melhor situação. Ou seja, quanto ela gastou e não conseguirá levar por excesso de peso. Vamos ajudar a professora fazendo este cálculo para ela?
+
+
+\vspace{0.3cm}
+\textbf{Entrada}
+Cada entrada contém:
+\begin{itemize}
+    \item um inteiro $X$ que corresponderá aos $M$ pacotes de cafés;
+    \item um número $Y$, correspondente à capacidade de carga disponível no carro para os cafés;
+    \item $M$ linhas com dois números, separados por um espaço, sendo o peso, seguido do valor.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Saída}
+O algoritmo deve retornar um valor numérico, com duas casas decimais, correspondendo ao prejuízo financeiro que a professora terá.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{8cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{5} & \texttt{1200.00} \\  
+         \texttt{50} & \texttt{} \\  
+         \texttt{40 840} & \texttt{} \\
+         \texttt{30 600} & \texttt{} \\
+         \texttt{20 400} & \texttt{} \\
+         \texttt{10 100} & \texttt{} \\
+         \texttt{20 300} & \texttt{} \\
+         \hline
+                  \texttt{3} & \texttt{2653.12} \\  
+         \texttt{450} & \texttt{} \\  
+         \texttt{420 1500} & \texttt{} \\
+         \texttt{450 1200} & \texttt{} \\
+         \texttt{480 1550} & \texttt{} \\
+\hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputProblem}
+\end{table}}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_23/G/G3.cpp}
+\end{center}

@@ -1,0 +1,69 @@
+\begin{center}
+Problema H
+
+Rosa dos Ventos
+
+{\tiny Por Heverton Barros de Macêdo}
+
+Timelimit: $1$	
+\end{center}
+
+Em uma competição de parapente há um série de provas, sendo a prova de navegação a que demanda maior estratégia por parte da equipe. Na prova de navegação, alguns minutos antes de seu início, os pilotos recebem um roteiro com os pontos a serem sobrevoados. Ganha a prova, o piloto que conseguir passar sobre a maior quantidade de pontos dentro do limite de tempo previamente estabelecido pela direção de prova.
+
+Nesse ano a organização do Campeonato Goiano de Parapente (CGP) decidiu inovar exigindo que todos os pilotos façam somente curvas de 90 graus. Além disso, ao término da prova, antes de pousar, o piloto deve estar voando na mesma direção em que saiu da rampa.
+
+O problema agora é que a direção de prova está com dificuldades para analisar os relatórios que contém as curvas realizadas pelos pilotos.
+
+Ajude a CGP a avaliar o desempenho dos pilotos. Sua missão é construir um programa que possa analisar a sequência de curvas realizadas por um piloto e apresentar a direção em que ele terminou a prova.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A entrada contém vários casos de teste. A primeira linha de cada caso corresponde a quantidade de comandos $(Q)$ realizada pelo piloto $(1 \leq Q \leq 100)$, assim como a indicação da posição $P$ (Norte, Sul, Leste ou Oeste) da rampa em que ele decolou $(P \in \left\{N, S, L, O\right\})$, sendo essas duas informações separadas por um único espaço. A segunda linha indica a sequência de comandos $(C)$ realizada pelo piloto, podendo ser $D$, $E$ ou $F$, com significado de curva à Direita, curva à Esquerda e siga em Frente, respectivamente $(C \in \left\{D, E, F\right\})$.
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+O programa deve produzir como saída uma única letra indicando a direção em que o piloto finalizou a prova de navegação, podendo ser $N$ (Norte), $S$ (Sul), $L$ (Leste) ou $O$ (Oeste).
+
+O final da entrada é indicado por $Q = 0$.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{1 N} & \texttt{O} \\  
+         \texttt{E} & \texttt{L} \\
+         \texttt{3 O} & \texttt{S} \\  
+         \texttt{DDF} & \texttt{S} \\
+         \texttt{7 S} & \texttt{N} \\  
+         \texttt{DDFDEDD} & \texttt{} \\
+         \texttt{7 N} & \texttt{} \\  
+         \texttt{DFDFEDF} & \texttt{} \\
+         \texttt{13 O} & \texttt{} \\  
+         \texttt{FEFEFEFEFEFDD} & \texttt{} \\
+         \texttt{0} &  \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputL}
+
+    
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/H/H2.cpp}
+\end{center}

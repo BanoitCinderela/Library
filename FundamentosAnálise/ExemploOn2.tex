@@ -1,0 +1,66 @@
+\subsection{Complexidade O(n²)}
+
+A complexidade O(n²) é uma medida de desempenho de algoritmos que indica que o tempo de execução cresce quadraticamente com o tamanho da entrada, representado por $'n'$. Isso significa que, se o tamanho da entrada dobrar, o tempo de execução será aproximadamente quatro vezes maior, devido ao fator quadrático. Algoritmos com essa complexidade frequentemente envolvem dois loops aninhados, onde cada elemento da entrada é comparado ou processado em relação a todos os outros elementos.
+
+Um exemplo clássico de algoritmo com complexidade O(n²) é o Bubble Sort, onde, para cada elemento de uma lista, são feitas comparações com os elementos subsequentes para realizar trocas e ordenar os dados. Em um caso médio ou pior, o algoritmo precisa percorrer a lista n vezes, e em cada iteração, realiza até n comparações ou operações, resultando em n * n = n² aoperações. Essa característica torna esses algoritmos ineficientes para grandes volumes de dados, pois o custo computacional aumenta rapidamente.
+
+Embora algoritmos O(n²) sejam menos eficientes do que aqueles com complexidades lineares O(n) ou logarítmicas O(log n), eles ainda têm utilidade em cenários com entradas pequenas ou quando a simplicidade de implementação é mais importante que o desempenho. Além disso, podem servir como base para otimizações ou em situações específicas onde o pior caso raramente ocorre. No entanto, para aplicações de larga escala, é comum buscar alternativas mais eficientes, como algoritmos com complexidade O(n log n), típicos de métodos de ordenação mais avançados como Quick Sort ou Merge Sort.
+
+Segue o exemplo representativo da complexidade O(n²):
+\begin{center}
+Fibonacci em Vetor
+
+{Beecrowd 1176}
+
+Timelimit: $1$	
+\end{center}
+
+Faça um programa que leia um valor e apresente o número de Fibonacci correspondente a este valor lido. Lembre que os 2 primeiros elementos da série de Fibonacci são 0 e 1 e cada próximo termo é a soma dos 2 anteriores a ele. Todos os valores de Fibonacci calculados neste problema devem caber em um inteiro de 64 bits sem sinal.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A primeira linha da entrada contém um inteiro T, indicando o número de casos de teste. Cada caso de teste contém um único inteiro N $(0 \leq N \leq 60)$, correspondente ao N-esimo termo da série de Fibonacci.
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+Para cada caso de teste da entrada, imprima a mensagem "Fib(N) = X", onde X é o N-ésimo termo da série de Fibonacci.
+
+%---------------------------------------------------------
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{3} & \texttt{FIB(0) = 0} \\
+         \texttt{0} & \texttt{FIB(4) = 3} \\
+         \texttt{4} & \texttt{FIB(2) = 1} \\
+         \texttt{2} & \texttt{}\\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tabela04}
+\end{table}
+%------------------------------------
+
+
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+    \lstinputlisting[language=C++]{fig/fibo.cpp}
+\end{minipage}
+\end{center}
+$T(n)=C1*1+C2*1+C3*1+C4*(59)+C5*T+C6*T$\\
+$T(n)=K+(C5+C6)*T$\\
+$T(n)=a*T+b=O(T)$

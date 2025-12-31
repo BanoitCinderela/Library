@@ -1,0 +1,62 @@
+\begin{center}
+Problema J 
+
+Álbum da Copa
+
+{\tiny Por OBI BR Brasil}
+
+Timelimit: $1$	
+\end{center}			
+			
+Em ano de Copa do Mundo de Futebol, o álbum de figurinhas oficial é sempre um grande sucesso entre crianças e também entre adultos. Para quem não conhece, o álbum contém espaços numerados de 1 a N para colar as figurinhas; cada figurinha, também numerada de 1 a N, é uma pequena foto de um jogador de uma das seleções que jogará a Copa do Mundo. O objetivo é colar todas as figurinhas nos respectivos espaços no álbum, de modo a completar o álbum (ou seja, não deixar nenhum espaço sem a correspondente figurinha).
+
+As figurinhas são vendidas em envelopes fechados, de forma que o comprador não sabe quais figurinhas está comprando, e pode ocorrer de comprar uma figurinha que ele já tenha colado no álbum.
+
+Para ajudar os usuários, a empresa responsável pela venda do álbum e das figurinhas quer criar um aplicativo que permita gerenciar facilmente as figurinhas que faltam para completar o álbum e está solicitando a sua ajuda.
+
+Dados o número total de espaços e figurinhas do álbum, e uma lista das figurinhas já compradas (que pode conter figurinhas repetidas), sua tarefa é determinar quantas figurinhas faltam para completar o álbum.
+ 
+\vspace{0.3cm}
+\textbf{Entrada}
+A primeira linha contém um inteiro $N (1 \leq N \leq 100)$ indicando o número total de figurinhas e espaços no álbum. A segunda linha contém um inteiro $M (1 \leq M \leq 300)$ indicando o número de figurinhas já compradas. Cada uma das $M$ linhas seguintes contém um número inteiro $X (1 \leq X \leq N)$ indicando uma figurinha já comprada.
+
+\vspace{0.3cm}
+\textbf{Saída}
+Seu programa deve produzir uma única linha contendo um inteiro representando o número de figurinhas que falta para completar o álbum.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+         \begin{center}
+            \vspace{-0.3cm}
+             \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+         \end{center} 
+         &  
+         \begin{center}
+            \vspace{-0.3cm}
+             \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+         \end{center} \\
+        \hline
+         \texttt{10 3} & \texttt{7} \\
+         \texttt{5 8 3} & \\
+        \hline
+         \texttt{5 6} & \texttt{3} \\
+         \texttt{3 3 2 3 3 3} & \\
+         \hline         
+          \texttt{3 4} & \texttt{0} \\
+         \texttt{2 1 3 3} & \\
+         \hline             
+    \end{tabular}
+    \caption{OBI - Olimpíada Brasileira de Informática 2018 - Fase 1}
+    \label{tab:inputb}
+    
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/J/J2.cpp}
+\end{center}

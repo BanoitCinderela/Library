@@ -1,0 +1,91 @@
+\begin{center}
+Problema D
+
+Colmeia
+
+{\tiny Por Gustavo Leal}
+
+Timelimit: $1$	
+\end{center}
+
+Dayllon vem de uma tradicional família de fazendeiros. Há séculos sua família planta diversos tipos de plantas da família Cucurbitaceae, de cabotiás a abobrinhas, todas são parte da produção familiar. Mas infelizmente as plantações do ultimo ano não foram produtivas, pois a região está com falta de abelhas, impedindo que qualquer tipo de legume prospere.
+
+Muito Perspicaz, Dayllon decidiu criar abelhas, para assim mitigar esta crise. Ele escolheu criar um tipo específico de abelhas, nomeado-a de abelius padronos. As abelhas deste tipo seguem padrões extremamente específicos. A sua colmeia, por exemplo, é composta por alvéolos hexagonais como qualquer outra, mas eles seguem uma padrão muito bem definido. Toda colmeia pode ser definida através de uma profundidade $N$. 
+
+As abelhas começam a construir as colmeias a partir de um alvéolo central. Depois disso constroem alvéolos adjacentes aos alvéolos que estão na borda da colmeia, e assim por diante, até que tenham feito isso $N-1$ vezes. Seguem alguns exemplos:
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \includegraphics[scale = 0.7]{fig/abelha1.png} &
+    \includegraphics[scale = 0.7]{fig/abelha2.png} &
+    \includegraphics[scale = 0.7]{fig/abelha3.png} \\
+    \small{$N = 1$.} &
+    \small{$N = 2$.} &
+    \small{$N = 3$.}
+  \end{tabular}
+\end{center}
+
+Depois de construir as colmeias, as abelhas começam a carregar bolhas de pólen para os alvéolos. Cada abelha consegue preencher um alvéolo por completo em uma viagem, mas elas são muito restritivas. Elas só colocarão pólen em um alvéolo se 3 ou mais alvéolos adjacentes já estiverem cheios de pólen.
+
+Dayllon percebeu que isso implica que alguns alvéolos não serão preenchidos pelas abelhas, indicando que elas irão trabalhar menos. Ele então decidiu preencher alguns alvéolos manualmente, de forma que todos os alvéolos da colmeia sejam preenchidos por pólen no final. Ajude Dayllon a descobrir qual é o mínimo de alvéolos que ele precisa preencher, para uma colmeia com profundidade $N$.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A entrada consiste de uma linha com um inteiro N representando a profundidade da colmeia.
+\begin{itemize}
+\item $1 \leqslant N \leqslant 10^{9}$;
+\end{itemize} 
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+Imprima um inteiro representando a quantidade de alvéolos que o Dayllon precisa de preencher.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{1} & \texttt{1} \\ \hline
+         \texttt{2} & \texttt{3} \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputM}
+\end{table}
+
+\textbf{Notas}
+
+Para o exemplo 1 as abelhas nunca irão preencher uma colmeia com somente um alvéolo, então a única possibilidade seria Dayllon preenche-lo manualmente.
+
+Para o exemplo 2, o Dayllon pode seguir os passos a seguir:
+\begin{center}
+  \begin{tabular}{ccc}
+    \includegraphics[scale = 0.4]{fig/abelha2_empty.png} &
+    \includegraphics[scale = 0.4]{fig/abelha2_dayllon.png} &
+    \includegraphics[scale = 0.4]{fig/abelha2.png} \\
+    \small{Colmeia sem nenhum Polén.} &
+    \small{Polén inserido manualmente.} &
+    \small{Resultado final.}
+  \end{tabular}
+\end{center}
+
+
+Neste caso as abelhas irão preencher o alvéolo central, pois ele possui 3 alvéolos adjacentes preenchidos. Depois disso, todos os alvéolos restantes também terão 3 alvéolos adjacentes preenchidos.
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_23/D/D3.cpp}
+\end{center}

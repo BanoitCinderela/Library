@@ -1,0 +1,50 @@
+\begin{center}
+Problema G
+
+Marlóvsky e a Academia
+
+{\tiny Por Márcio Belo-Filho}
+
+Timelimit: $1$	
+\end{center}			
+			
+O professor Marlóvsky gosta muito de malhar na academia e sempre executar um treino diferente. A academia que ele malha possui uma lista com $N$ equipamentos, cada equipamento com o seu respectivo número de $1$ a $N$. Marlóvsky quer malhar em $P$ equipamentos por dia, mas prefere que as numerações dos equipamentos escolhidos para um dia tenham uma diferença de pelo menos $R$ unidades entre si. O professor Marlóvsky quer saber quantos treinos ele pode montar com essa estratégia. 
+
+\vspace{0.3cm}
+\textbf{Entrada}
+O arquivo de entrada possui uma única linha com três inteiros $N$, $P$ e $R$, ($1 \leq N \leq 10^{3}$), ($1 \leq P \leq 10^{2}$) e ($1 \leq R \leq 10^{2}$) indicando: o número de equipamentos da academia, o número de equipamentos utilizados em um treino e a diferença mínima entre os números dos equipamentos. 
+
+\vspace{0.3cm}
+\textbf{Saída}
+Seu programa deve imprimir uma única linha na saída, contendo o número de treinos possíveis. Como os números podem ser grandes, imprima a resposta módulo 100000007.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{8 3 2} & \texttt{20} \\ \hline
+         \texttt{8 2 3} & \texttt{15} \\ \hline
+         \texttt{5 5 1} & \texttt{1} \\ \hline
+         \texttt{1 2 1} & \texttt{0} \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputG}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/G/G2.cpp}
+\end{center}

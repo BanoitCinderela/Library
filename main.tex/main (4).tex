@@ -1,0 +1,113 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{sbc-template}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tensor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[algoruled, linesnumbered, portuguese]{algorithm2e}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\lstset{
+  language=C,
+  basicstyle=\ttfamily\small,
+  extendedchars=true,
+  showspaces=false,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true
+}
+\usepackage{fancyhdr}
+\rhead{\thepage}
+\lhead{MP 2025 IF Goiano}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\everymath{\displaystyle}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{vwcol}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\tcbuselibrary{skins}
+
+\tcbuselibrary{listings,breakable}
+
+\tcbset{
+    listing only,
+    breakable,
+    enhanced,
+    frame hidden,
+    arc=0pt,
+    outer arc=0pt,
+    top=0pt,
+    bottom=0pt,
+    left=0pt,
+    right=0pt,
+    colback=white,
+    fontupper=\ttfamily\footnotesize,
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[! tbp]
+    \centering
+    \subfloat{\includegraphics[width=0.35\textwidth]{fig/if rio verde.png}}
+    \hfill
+ \subfloat{\includegraphics[width=0.45\textwidth]{fig/abobora.png}}
+ \vspace{2 cm}
+\end{figure}
+\begin{center}
+\huge \textbf{Biblioteca de algoritmos e códigos em C++ para consulta nas maratonas de programação}
+\vspace{1 cm}
+
+\Large Esta biblioteca foi criada para consulta dos principais algoritmos utilizados nas maratonas de programação, esses algoritmos  foram implementados utilizando a linguagem C++,visando:
+
+\begin{enumerate}
+    \item Auxiliar na aprendizagem de programação e suas aplicações;
+
+     \item Desenvolver soluções eficientes para resolver problemas computacionais;
+
+        \item Compreender algoritmos e suas técnicas;
+        
+         \item Incentivar a participação em maratonas;
+         
+    \item O trabalho tem como objetivo:
+    
+    \begin{enumerate}
+        \item \textit{Motivar os alunos em competições}
+        \item \textit{Criar um material impresso que possa ser utilizado:}
+    \end{enumerate}
+\end{enumerate}
+\end{center}
+
+\include{FundamentoAnálise/fundamentos}
+
+
+\input{abobora_22/regras}
+\input{abobora_22/main22}
+
+\input{abobora_23/main23}
+
+\input{abobora_24/main24}
+
+\input{abobora_25/main25}
+\bibliography{references}
+
+\end{document}

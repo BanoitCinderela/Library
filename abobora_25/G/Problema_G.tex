@@ -1,0 +1,109 @@
+\begin{center}
+Problema G
+
+Comportamento Dinâmico
+
+{\small Nome do arquivo: G.c, G.cpp, G.java, ou G.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Heverton Barros de Macêdo}
+
+\end{center}
+
+\footnotesize
+
+	Durante uma investigação sobre o comportamento de sistemas dinâmicos, Wolfram definiu o seguinte cenário para efetuar experimentos: dada uma cadeia de $N$ células, linearmente distribuídas, cada célula armazena um único estado (bit), e além disso as células das extremidades são vizinhas entre si. Para cada instante de tempo $t$ a evolução dessa cadeia ocorre simultaneamente em todas as células, considerando uma regra de evolução previamente definida. Essa regra é aplicada a cada vizinhança de $K=3$ células gerando um novo estado, conforme indicado na Tabela~\ref{tab:evolucao}.
+	
+	\begin{table}[h!]
+		\caption{Regra aplicada para evolução do experimento de Wolfram.}
+		\label{tab:evolucao}
+		
+		\centering
+		\footnotesize{
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\cellcolor[HTML]{DDDDDD} Regra para vizinhança & 000 & 001 & \cellcolor[HTML]{FFAAAA} 010 & 011 & 100 & 101 & 110 & 111 \\ \hline
+			\cellcolor[HTML]{DDDDDD} Novo estado para célula central & 1 & 0 &  \cellcolor[HTML]{AAFFAA} 0 & 1 & 0 & 0 & 0 & 1 \\ \hline
+		\end{tabular}
+		}
+	\end{table}
+
+Como exemplo, considere um experimento (veja a Tabela~\ref{tab:exemplo_evolucao}) com a cadeia de bits formada por $11$ células ($N = 11$), em que no instante $t = 0$ apenas um bit, exatamente no centro da cadeia, possui o estado $1$ e as demais células possuem o estado $0$, evoluindo por $4$ passos de tempo ($t = 4$).
+%Como exemplo, considere um experimento (veja a Tabela~\ref{tab:exemplo_evolucao}) com a cadeia de bits no espaço linear formada por $11$ células ($N = 11$), em que apenas um bit, exatamente no centro da cadeia ($t = 0$), possui o estado $1$ e as demais células possuem o estado $0$, evoluindo por $4$ passos de tempo.
+
+A Tabela~\ref{tab:exemplo_evolucao} ilustra o experimento com a configuração inicial ($t = 0$) formada por: $00000100000$. No próximo passo de tempo ($t = 1$), todas as células evoluem (podem alterar o estado) considerando a vizinhança indicada na regra (Tabela~\ref{tab:evolucao}). Em destaque na cor vermelha (Tabelas~\ref{tab:evolucao} e ~\ref{tab:exemplo_evolucao}) está a atualização da célula central, formada pela vizinhança $010$ que, segundo a regra, deve evoluir no próximo passo de tempo ($t = 1$) para o estado $0$ (destaque na cor verde). É possível notar no exemplo, a evolução da cadeia inicial por $4$ passos de tempo. Vale destacar que as células na extremidade (esquerda e direta) estão conectadas (formato de anel - toroidal)
+
+	\begin{table}[h!]
+	\caption{Exemplo de um experimento por $4$ passos de tempo.}
+	\label{tab:exemplo_evolucao}
+	
+	\centering
+	\footnotesize{	
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Tempo & \multicolumn{11}{c|}{Cadeia linear de N células}\\ \hline
+    	$t = 0$ & 0 & 0 & 0 & 0 & \cellcolor[HTML]{FFAAAA} 0 & \cellcolor[HTML]{FFAAAA} 1 & \cellcolor[HTML]{FFAAAA} 0 & 0 & 0 & 0 & 0 \\ \hline
+		$t = 1$ & 1 & 1 & 1 & 1 &  0 & \cellcolor[HTML]{AAFFAA} 0 & 0 & 1 & 1 & 1 & 1 \\ \hline
+		$t = 2$ & 1 & 1 & 1 & 0 &  1 & 0 & 0 & 1 & 1 & 1 & 1 \\ \hline
+		$t = 3$ & 1 & 1 & 0 & 0 &  0 & 0 & 0 & 1 & 1 & 1 & 1 \\ \hline
+		$t = 4$ & 1 & 0 & 0 & 1 &  1 & 1 & 0 & 1 & 1 & 1 & 1 \\ \hline
+	\end{tabular}
+	}	
+\end{table}
+
+%\pagebreak
+Sua missão é ajudar Wolfram a obter a configuração dos estados após $t$ passos de tempo, considerando uma
+sequência inicial qualquer no tempo $t = 0$ e a aplicação da regra indicada no enunciado.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A entrada contém vários casos de teste. Cada linha contém um inteiro $t$ ($0~<~t~\leq~1000$), que representa
+a quantidade de passos de evolução, seguido pela cadeia de bits no tempo $t = 0$, que pode variar conforme a
+quantidade de células da amostra $N$ ($3 \leq N < 100$).
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+O programa deve produzir como saída a configuração da cadeia no espaço linear de células após a evolução
+de $t$ passos de tempo.
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabular}{|p{8cm}|p{8cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+		    \texttt{1 00000100000} & \texttt{11110001111} \\
+         \hline
+   		    \texttt{2 00000100000} & \texttt{11100101111} \\
+         \hline    
+   		    \texttt{3 00000100000} & \texttt{11000001111} \\
+         \hline    
+   		    \texttt{578 00000100000} & \texttt{00000111101} \\
+         \hline    
+   		    \texttt{978 011001111000110111010011} & \texttt{100111000001110000011101} \\
+         \hline    
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}    
+\end{table}
+
+\normalsize
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_25/G/G5.cpp}
+\end{center}

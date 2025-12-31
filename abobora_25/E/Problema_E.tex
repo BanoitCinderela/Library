@@ -1,0 +1,74 @@
+\begin{center}
+Problema E
+
+Estória da Estônia
+
+{\small Nome do arquivo: E.c, E.cpp, E.java, ou E.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Márcio Belo}
+
+\end{center}			
+
+O professor Márcio Belo sempre gostou de charadas matemáticas. Um dia ele se deparou com uma estória, pra lá da Estônia. Dado um número primo ímpar $p$, sempre é possível um triângulo de lados inteiros $x$, $y$ e $z$, em ordem crescente de tamanho com as seguintes propriedades: 
+\begin{itemize}
+    \item A diferença da soma dos lados menores do triângulo pelo lado maior é igual ao primo $p$; 
+    \item A diferença da soma das áreas dos quadrados de lados $x$ e $y$ e a área do quadrado de lado $z$ é igual ao primo $p$. 
+\end{itemize}
+Em matematiquês:
+
+\vspace{3mm}
+Dado um primo $p \geq 3$, sempre existem triplas $(x,y,z)$, com $x \leq y \leq z$ que satisfazem: 
+\begin{align*}
+    x + y - z & = p \\
+    x^{2} + y^{2} - z^{2} & = p 
+\end{align*}
+Quem são essas triplas $(x,y,z)$? Você pode ajudar o professor?
+
+\vspace{0.3cm}
+\textbf{Entrada}
+Cada entrada contém uma única linha com o número primo $p$, com $(3 \leq p < 2^{16})$. 
+
+\vspace{0.3cm}
+\textbf{Saída}
+O sistema deve retornar todas as triplas $(x,y,z)$ em ordem crescente de $x$. Uma tripla por linha,  
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{3} & \texttt{(4,6,7)} \\  
+         \hline
+         \texttt{5} & \texttt{(6, 15, 16)} \\ 
+          & \texttt{(7, 10, 12)} \\ 
+         \hline
+         \texttt{13} & \texttt{(14, 91, 92)} \\
+         & \texttt{(15, 52, 54)} \\
+         & \texttt{(16, 39, 42)} \\
+         & \texttt{(19, 26, 32)} \\ 
+         \hline
+         \texttt{65267} & \texttt{(65268,2129923278,2129923279)} \\ 
+          & \texttt{(97900,130534,163167)} \\ 
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+
+\end{table}
+
+\newpage
+\begin{center}
+\noindent
+\lstinputlisting{abobora_25/E/E5.cpp}
+\end{center}

@@ -1,0 +1,59 @@
+\begin{center}
+Problema D
+
+Balança do Festival
+
+{\small Nome do arquivo: D.c, D.cpp, D.java, ou D.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Athos José}
+
+
+\end{center}
+
+Na cidade das Abóboras, Zé do Grafo é famoso por fazer suas peripécias com grafo, mas agora ele quer cultivar as mais saborosas abóboras da região. Com a chegada do \textit{Concurso das Abóboras}, ela precisa escolher algumas de suas abóboras para exibir no festival. No entanto, existe uma regra: a soma dos pesos das abóboras escolhidas deve ser um valor $P$ estabelecido pelo festival.
+
+Zé do Grafo já colheu algumas abóboras e está determinado a participar, mas precisa da sua ajuda para decidir se ele conseguirá escolher algumas abóboras que atinjam exatamente o peso estabelecido, sem passar nem faltar. Será que você consegue ajudá-lo dizendo se ele tem essas abóboras?
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A primeira linha contém dois inteiros, $N$, $P$, representando respectivamente o número de abóboras $(1 \leq N \leq 10^4)$ e o peso para competição $(1 \leq P \leq 10^4)$. A segunda linha contém $N$ inteiros $a_1, \dots, a_N$ $(1 \leq a_i \leq 100)$, onde $a_i$ indica o peso da abóbora.
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+Imprima ``SIM'' se for possível escolher algumas abóboras de modo que a soma dos pesos delas seja exatamente $P$. Caso contrário, imprima ``NAO''.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+       \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{5 9} & \texttt{SIM} \\  
+         \texttt{3 1 4 2 5} & \\
+         \hline
+         \texttt{4 11} & \texttt{NAO} \\  
+         \texttt{8 4 6 2} & \\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/D/D4.cpp}
+\end{center}

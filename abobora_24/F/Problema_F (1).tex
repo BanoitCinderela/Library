@@ -1,0 +1,90 @@
+\begin{center}
+Problema F
+
+A teia da aranha Tecelã
+
+{\small Nome do arquivo: F.c, F.cpp, F.java, ou F.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Douglas Cedrim}
+
+\end{center}
+
+	A Tecelã é uma aranha que vive antenada nas novas tecnologias que surgem pra ajudar no seu cotidiano. No seu dia a dia ela produz uma certa quantidade $X$ de fibra, que será utilizada como matéria prima nas teias que ela tece. Essa teia é muito importante pois permite, por exemplo, que ela consiga capturar insetos para sua própria alimentação.
+	
+%	Certo dia, ouvindo a conversa entre estudantes de Computação, ela ficou muito animada em conhecer o conceito de algoritmo. 
+	%
+	Ao visitar o prédio de Informática no IF Goiano, ela observou vários tubos onde poderia tecer sua teia para buscar alimento. Ela observou que todos eles tinham o formato cilíndrico, com as extremidades definidas por círculos.
+	%	
+	Decidiu então que só iria tecer uma teia se a quantidade $X$ de fibras que ela produziu, que é medida em $m^2$, fosse suficiente para cobrir toda a secção transversal da extremidade do tubo, e que precisaria bolar um algoritmo para isso. O problema é que os tubos têm tamanhos bem diferentes entre si.
+	
+
+	
+	%Sendo assim, ela vai a um determinado tubo e percorre o contorno da secção transversal, produzindo uma teia para medir o seu comprimento. 
+	Sendo assim, ela vai a um determinado tubo e percorre o contorno da secção transversal, produzindo uma teia que mede exatamente o comprimento $C$ da circunferência do cilindro. Considere que a espessura do cilindro é irrelevante para as contas. E também que o quanto ela usou de teia para a medição ($C$) não irá impactar na decisão.
+
+	%Esse dado será utilizado como entrada no algoritmo para determinar o quanto de teia ela irá precisar para cobrir toda a extremidade da secção do tubo.
+%	\vspace*{-2cm}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{fig/f_aranha2.png}
+		\caption{Esquema do algoritmo da aranha Tecelã}%, da espécie \textit{Parawixia bistriata}, muito comum no cerrado brasileiro.}
+	
+	\end{figure}
+
+%	Considere que a medição da Tecelã é exata, e que a espessura do tubo é irrelevante para as contas.
+	
+	E aí, será que você pode ajudar a Tecelã a identificar se ela deve tecer a sua teia em um determinado tubo?
+
+\vspace{0.3cm}
+\textbf{Entrada}
+Cada entrada contém duas medidas, separadas por um espaço: primeiro o montante $X$ de fibra produzido pela Tecelã, em $m^2$; e em seguida o comprimento $C$ da circunferência do tubo, medido com sua teia.
+
+% A primeira linha contém um inteiro $X$ indicando o nível (iniciado em 0) da hierarquia onde estão os genes $(0 \leq X \leq 99)$. A segunda linha representa a quantidade $N$ de genes de um indivíduo $(1 \leq X \leq 100)$. A terceira linha é formada pela sequência de genes de um indivíduo, sendo que cada elemento está no intervalo de $0$ a $10000$.
+
+\vspace{0.3cm}
+\textbf{Saída}
+O sistema deve retornar "SIM"\ caso a quantidade de fibra que ela possui seja suficiente para cobrir a secção da extremidade do tubo. Caso contrário, a resposta deverá ser "NAO". Não esqueça do terminador de quebra de linha.
+
+%O sistema deve retornar a sequência de genes significativos seguido do caractere \#, todos separados por um único espaço, conforme o nível hierárquico $X$, indicado na primeira linha da entrada. Os filhos 1, 2, 3 e 4, devem ser representados da esquerda para direta. Se nenhum gene significativo for encontrado no nível indicado, a saída terá apenas o caractere \#.
+
+\begin{table}[ht]
+    \centering
+   % \small
+    \begin{tabular}{|p{12cm}|p{3cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+		    \texttt{3.4} \texttt{6.3}  & \texttt{SIM} \\
+         \hline
+   		    \texttt{3.0} \texttt{6.3}  & \texttt{NAO} \\
+         \hline    
+   		    \texttt{0.09} \texttt{1}  & \texttt{SIM} \\
+%         \hline    
+         %\texttt{2} & \texttt{2501 25 38 78 \#} \\  
+         %\texttt{10} & \texttt{} \\  
+         %\texttt{5 98 78 50 7 38 25 61 1579 2501} & \texttt{} \\
+         \hline    
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+
+\end{table}
+
+%\normalsize
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/F/F4.cpp}
+\end{center}

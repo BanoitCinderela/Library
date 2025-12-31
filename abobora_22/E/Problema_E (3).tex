@@ -1,0 +1,55 @@
+\begin{center}
+Problema E
+
+A Mudança
+% Complexidade - O(V)
+
+{\tiny Por Douglas Cedrim}
+
+Timelimit: $1$	
+\end{center}			
+
+O ano é 2019, segundo semestre, e o curso de computação terá finalmente seu prédio inaugurado. Para conseguir tal feito, será preciso migrar todos os $C$ computadores disponíveis para o novo prédio. Motivados para inaugurar o seu novo lugar de estudos, os estudantes mobilizam um total de $V$ voluntários para ajudar no processo, carregando cada qual um certo número de computadores do prédio antigo para o novo prédio.
+
+De forma a evitar o desgaste individual e dividir o trabalho de forma mais balanceada possível, os alunos reúnem-se sob a sombra de um ipê amarelo e, diferente dos  pré-socráticos na Grécia antiga, decidem debater e deixar por escrito um algoritmo que resolve esse problema de forma otimizada para que, no dia da mudança, seja executado e a distribuição seja feita da melhor forma possível.
+
+Como eles poderiam resolver esse problema, de forma que a distribuição do número de computadores que cada voluntário deverá carregar seja mais balanceada possível?
+
+\vspace{0.3cm}
+\textbf{Entrada}
+O arquivo de entrada possui 1 linha. Ela contém dois números inteiros $V$ e $C$ ($1 \leq V \leq 10^{3}$) e ($1 \leq C \leq 10^2$), indicando o número de voluntários e a quantidade máxima de computadores que devem ser levados de um prédio para outro, respectivamente.
+
+\vspace{0.3cm}
+\textbf{Saída}
+Seu programa deve imprimir uma única linha na saída, contendo números inteiros maiores ou iguais a zero, separados por espaço, indicando quantos computadores cada voluntário deverá levar para o novo bloco.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{8 32} & \texttt{4 4 4 4 4 4 4 4}  \\ \hline
+         \texttt{13 40} & \texttt{4 3 3 3 3 3 3 3 3 3 3 3 3}  \\ \hline
+         \texttt{2 80} & \texttt{40 40}  \\ \hline 
+         \texttt{80 2} & \texttt{1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}  \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputO}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_22/E/E2.cpp}
+\end{center}

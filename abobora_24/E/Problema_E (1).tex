@@ -1,0 +1,70 @@
+\begin{center}
+Problema E
+
+Estratagema Abobrense
+
+{\small Nome do arquivo: E.c, E.cpp, E.java, ou E.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Márcio Belo}
+
+\end{center}			
+
+No dia dos mortos, as crianças abobrenses costumam pintar os gomos de abóboras maduras, nunca pintando gomos vizinhos/adjacentes e cada gomo com uma cor diferente. Por exemplo, a abóbora da figura abaixo possui 10 gomos, sendo que 2 gomos foram pintados com 2 cores diferentes, com 1 gomo não pintado entre eles (pelo outro sentido, 7 gomos). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.36\linewidth]{fig/Gomos.png}
+    \caption{Abóbora de 10 gomos, com 2 gomos pintados. }
+    \label{fig:enter-label}
+\end{figure}
+
+O professor Márcio Belo, intrigado com a cultura local, decidiu calcular de quantas formas é possível pintar $P$ gomos de uma abóbora com $N$ gomos, de $P$ cores diferentes, e considerando que entre dois gomos pintados devem haver pelo menos $R$ gomos não pintados. Considere também que os gomos são diferentes entre si. Você pode ajudar o professor? 
+
+\vspace{0.3cm}
+\textbf{Entrada}
+Cada entrada contém uma única linha com: o número $N$ de gomos da abóbora, com $(2 \leq N \leq 10^{6})$; o número $P$ de gomos a ser pintados e o número de cores diferentes, com $(1 \leq P \leq N)$; e o número $R$ de mínimo de gomos não pintados entre gomos pintados $(1 \leq R < N)$. 
+
+\vspace{0.3cm}
+\textbf{Saída}
+O sistema deve retornar a quantidade de formas em que, dada uma abóbora de $N$ gomos é possível pintar $P$ gomos com cores diferentes com no mínimo $R$ gomos não pintados entre dois gomos pintados. Quando o problema for impossível, retorne $0$. A resposta deve ser dada módulo $10^{9}+7$.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{10 1 1} & \texttt{10} \\  
+         \hline
+         \texttt{10 2 1} & \texttt{70} \\ 
+         \hline
+         \texttt{10 5 1} & \texttt{240} \\ 
+         \hline
+         \texttt{10 6 1} & \texttt{0} \\ 
+         \hline
+         \texttt{10 2 2} & \texttt{50} \\ 
+         \hline
+         \texttt{100 24 2} & \texttt{64268812} \\ 
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputE}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_24/E/E4.cpp}
+\end{center}

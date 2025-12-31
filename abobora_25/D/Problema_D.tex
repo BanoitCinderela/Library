@@ -1,0 +1,71 @@
+\begin{center}
+Problema D
+
+Agência de Espionagem
+
+{\small Nome do arquivo: D.c, D.cpp, D.java, ou D.py}
+
+{\large Timelimit: $1$}
+
+{\tiny Por Athos José}
+
+
+\end{center}
+
+A Agência Nacional de Espionagem mantém em seus cofres uma coleção de símbolos secretos, representados por uma sequência de letras. Esses símbolos podem ser reorganizados em qualquer ordem, de forma a formar novas mensagens.
+
+Agentes inimigos, porém, estão tentando criar mensagens escondidas dentro dessas reorganizações. Uma mensagem inimiga é considerada possível se puder aparecer como uma sequência contínua de caracteres de alguma permutação dos símbolos guardados no cofre.
+
+Sua missão é, para cada mensagem inimiga recebida, determinar se ela pode ser formada a partir dos símbolos da Agência.
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A primeira linha contém um inteiro $N$ ($1 \leq N \leq 10^5$), o número de mensagens inimigas a serem analisadas, seguido de uma string $S$ ($1 \leq |S| \leq 10^5$) representando os símbolos secretos do cofre.
+
+Cada uma das próximas $N$ linhas contém uma string $Q_i$ ($1 \leq |Q_i| \leq 10^5$), representando uma mensagem inimiga a ser verificada.
+
+A soma dos comprimentos de todas as mensagens $Q_i$ não excede $10^9$.
+
+Todas as strings são compostas apenas de letras minúsculas do alfabeto inglês (a-z).
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+Para cada mensagem $Q_i$ imprima uma linha contendo:
+\begin{itemize}
+    \item ``SIM'', se a mensagem pode ser formada como substring de alguma permutação de $S$.
+    \item ``NAO'',caso contrário.
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+       \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+         \texttt{3 abac} & \texttt{SIM} \\  
+         \texttt{caa} & \texttt{NAO} \\
+         \texttt{aaa} & \texttt{SIM} \\  
+         \texttt{bac} & \\
+         \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputB}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_25/D/D5.cpp}
+\end{center}

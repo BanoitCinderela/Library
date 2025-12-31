@@ -1,0 +1,66 @@
+\begin{center}
+Problema C
+
+Abobonagramator
+
+{\tiny Por Rafael Castro}
+
+Timelimit: $1$	
+\end{center}			
+			
+Após anos de intenso desenvolvimento, os cientistas do instituto 
+\textit{edrev oir gfi}
+finalmente lançaram sua invenção que promete ser revolucionária: O Abobonagramator. Essa máquina é capaz de transformar qualquer palavra com pelo menos 7 letras, em um anagrama de "abobora". Uma palavra é anagrama de outra quando podemos reordenar as letras da primeira até virar a segunda, por exemplo "edrev" e "verde" são anagramas, assim como "oir" e "rio".
+ 
+    A máquina funciona realizando duas operações básicas, sobre qualquer palavra $T$, sucessivamente:
+
+    \begin{enumerate}
+        \item Substituição de uma letra por outra; ou seja, escolhendo uma letra $c$ e um índice $i$ e atribuindo o valor $T_i = c$. Por exemplo, se $T = "\textbf{a}bacate"$ e for escolhida a letra em negrito para ser substituída por 'e', então a nova palavra será $"\textbf{e}bacate"$. Essa operação custa 5 unidades de bateria da máquina. 
+        
+        \item Exclusão de uma letra; ou seja, escolhendo um índice $i$, e excluindo a letra $T_i$, deslocando as outras letras a frente de $i$ uma posição. Por exemplo, se $T = "u\textbf{v}auvauva"$ e for escolhida a letra em negrito para ser excluída, então a nova palavra será $"uauvauva"$. Essa operação custa 3 unidades de bateria da máquina.
+    \end{enumerate}
+
+    Dessa forma, calcule qual a mínima quantidade de unidades de bateria que o Abobonagramator precisa gastar para transformar uma palavra $S$ qualquer em um anagrama da palavra "abobora".
+
+\vspace{0.3cm}
+\textbf{Entrada}
+
+A entrada consistirá de uma única linha contendo uma palavra $S$, contendo letras do alfabeto (a..z), minúsculas e sem acento.
+\begin{itemize}
+\item $7 \leqslant |S| \leqslant 10^{5}$;
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Saída}
+
+A saída deve conter um único inteiro: A menor quantidade de unidades de bateria que a máquina gasta para transforma $S$ em um anagrama de "abobora". É garantido que sempre existe uma forma de transformar a palavra em um anagrama de "abobora".
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Entrada}
+            \vspace{-0.3cm}
+        \end{center} 
+         &  
+        \begin{center}
+            \vspace{-0.3cm}
+            \textbf{Exemplos de Saída}
+            \vspace{-0.3cm}
+        \end{center} \\ \hline
+        \texttt{abbobora} & \texttt{3} \\ \hline
+        \texttt{baoborex} & \texttt{8} \\ \hline
+        \texttt{uvauvauva} & \texttt{28} \\ \hline
+    \end{tabular}
+    \caption{Exemplos de entradas e saídas}
+    \label{tab:inputc2}
+\end{table}
+
+\newpage
+
+\begin{center}
+\noindent
+\lstinputlisting{abobora_23/C/C3.cpp}
+\end{center}

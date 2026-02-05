@@ -1,2 +1,2 @@
 # Library
-Esta biblioteca foi criada utilizando como base as provas da maratona de programação Abóbora Contest. Buscando auxiliar competidores em maratonas futuras, todas as resoluções que estão junto às questões foram escritas em C++.
+Criada para auxiliar na preparação para futuras maratonas, esta biblioteca reúne as resoluções em C++ de todas as questões do Abóbora Contest, abrangendo as edições de 2022 a 2025.
